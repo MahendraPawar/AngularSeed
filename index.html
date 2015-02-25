@@ -1,0 +1,39 @@
+<html ng-app="myapp">
+	<head>
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/lodash.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+		
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/font-awesome.css">
+	</head>
+	<body ng-controller="mainCtrl">
+		<div class="row">
+			<div class="col-md-1">
+				<ul class="nav nav-pills nav-stacked ">
+					<li class="text-center"><a href="#home"><i class="fa fa-home fa-2x"></i><br/><label>Home</label></a></li>
+					<li class="text-center"><a href="#bookmark"><i class="fa fa-bookmark fa-2x"></i><br/><label>Bookmark</label></a></li>
+					<li class="text-center"><a href="#info"><i class="fa fa-info-circle fa-2x"></i><br/><label>Info</label></a></li>
+					<li class="text-center"><a href="#mail"><i class="fa fa-envelope-o fa-2x"></i><br/><label>Mail</label></a></li>
+					<li class="text-center"><a href="#like"><i class="fa fa-thumbs-o-up fa-2x"></i><br/><label>Like<label></a></li>
+				</ul>
+			</div>
+			<div class="col-md-11 " >
+				<div class="panel panel-default">
+					<div class="panel-heading">{{heading}}</div>
+					<div class="panel-body">
+						<div class="row" ng-view=""></div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+		</div>		
+	</body>
+</html>

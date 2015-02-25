@@ -1,0 +1,31 @@
+<div class="row" ng-controller="mailCtrl">
+<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr class="info">
+					<th></th>
+					<th class="text-center">From</th>
+					<th class="text-center">To</th>
+					<th class="text-center">Subject</th>
+					<th class="text-center">Date</th>
+					<th ng-hide="true" class="text-center">Read</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="d in mailData">
+					<td class="text-center">
+						<i ng-show="d.read===false" class="fa fa-envelope"></i>
+						<i ng-show="d.read===true" class="fa fa-envelope-o"></i>
+					</td>
+					<td>{{d.from}}</td>
+					<td>{{d.to}}</td>
+					<td>{{d.subject}}</td>
+					<td class="text-center">{{d.date| date:'yyyy-MMM-dd'}}</td>
+					<td ng-hide="true" class="text-center"><input type="checkbox" ng-checked="d.read" readonly=""/></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-sm-1"></div>
+</div>
